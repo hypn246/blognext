@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --nav-icon-h:35px;
+  --nav-m:20px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +32,21 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav img{
+  width: var(--nav-icon-h);
+  height: var(--nav-icon-h);
+  margin: var(--nav-m);
+  object-fit: cover;
+}
+
+main{
+  margin-top: 75px;
+  height: 100vh;
 }
