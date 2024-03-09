@@ -34,19 +34,45 @@ body {
   }
 }
 
-nav{
+.nav{
   position: fixed;
   top: 0;
   width: 100%;
+  margin: 5px 0; 
 }
-nav img{
-  width: var(--nav-icon-h);
-  height: var(--nav-icon-h);
-  margin: var(--nav-m);
-  object-fit: cover;
+.nav h1{
+  font-size: 1.75rem;
+  margin: 0 15px;
 }
-
+.landscope img{
+  z-index: 1;
+}
 main{
-  margin-top: 75px;
-  height: 100vh;
+  margin:0;
+  height: 100%;
+}
+.diagonal{
+  color: white;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  padding: 12rem 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-left: auto;
+}
+.unique{
+  display:grid;
+  width: 100%;
+  gap: 6rem;
+  grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
+}
+.feature{
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.outer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
 }

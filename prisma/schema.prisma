@@ -7,41 +7,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model blogs {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  v         Int      @map("__v")
-  author    String
-  content   String
-  createdAt DateTime @db.Date
-  text      String
-  thumbnail String
-  title     String
-  updatedAt DateTime @db.Date
-}
 model blogNext {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  author    String
+  author    String?
   content   String
   createdAt DateTime @default(now())
-  type      String
-  thumbnail String
+  thumbnail String @db.String
   title     String
+  type      String
   updatedAt DateTime @updatedAt
-
-  @@map("blogNext")
-}
-
-model chos {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  v     Int    @map("__v")
-  title String
-  type  String
-  year  Int
-}
-
-model uselesses {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  v        Int    @map("__v")
-  password String
-  userName String
 }
